@@ -44,13 +44,16 @@ A web application that allows users to download videos from YouTube, Facebook, a
    git clone https://github.com/your-username/video-downloader.git
    cd video-downloader
 2. **Set Up a Virtual Environment**:
+   ```bash
    python -m venv venv
    venv\Scripts\activate
-3. **Install Dependencies:**
+4. **Install Dependencies:**
+   ```bash
    pip install -r requirements.txt
-4. **Run the Application:**
+6. **Run the Application:**
+   ```bash
     python app.py
-5. **Access the Application:**
+8. **Access the Application:**
    Open your browser and navigate to **http://127.0.0.1:5000**.
 
 
