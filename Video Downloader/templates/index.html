@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Downloader</h1>
+        <p>Paste the URL of a video from YouTube, Facebook, or Instagram to download it.</p>
+        <div class="input-group">
+            <input type="text" id="url" placeholder="Paste video URL here">
+            <button id="fetch-formats-btn" onclick="fetchFormats()">Fetch Formats</button>
+        </div>
+        <div id="format-selection" style="display: none;">
+            <label for="format">Select Quality:</label>
+            <select id="format">
+                <!-- Options will be populated dynamically -->
+            </select>
+            <button id="download-btn" onclick="downloadVideo()">Download</button>
+        </div>
+        <div id="facebook-notice" style="display: none;">
+            <p>Facebook videos will be downloaded in the highest available quality.</p>
+            <button id="download-btn" onclick="downloadVideo()">Download</button>
+        </div>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <p id="status"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
